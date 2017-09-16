@@ -11,6 +11,20 @@ public class GUIManager : MonoBehaviour {
     public GameObject infoPanel;                            // Information about project and team
     public GameObject exitPanel;                            // Exit confirmation panel
 
+	[Header("Algorithm Panels")]
+	public GameObject algorithmPanel1; 						// Algorithm 1
+	public GameObject algorithmPanel2; 						// Algorithm 2
+	public GameObject algorithmPanel3; 						// Algorithm 3
+	public GameObject algorithmPanel4; 						// Algorithm 4
+
+	[Header("Algorithm 1 steps")]
+	public GameObject algorithm1_Step1; 						// Algorithm 1 step 1
+	public GameObject algorithm1_Step2; 						// Algorithm 1 step 2
+	public GameObject algorithm1_Step3; 						// Algorithm 1 step 3
+	public GameObject algorithm1_Step4; 						// Algorithm 1 step 4
+
+
+
 	// Use this for initialization
 	void Start ()
     {
@@ -109,4 +123,102 @@ public class GUIManager : MonoBehaviour {
     }
 
 #endregion
+
+	#region ALGORITHM_CONTROL
+
+	public void ActiveAlorithm(int idAlgorithm)
+	{
+		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
+		switch (idAlgorithm) 
+		{
+			case 1:
+				algorithmPanel1.SetActive (true);
+				break;
+			case 2:
+				algorithmPanel2.SetActive (true);
+				break;
+			case 3:
+				algorithmPanel3.SetActive (true);
+				break;
+			case 4:
+				algorithmPanel4.SetActive (true);
+				break;
+		}
+	}
+
+	public void ReturnToChoosePanel()
+	{
+		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
+		algorithmPanel1.SetActive (false);
+		ActivatePanel(false, true, false, false);
+	}
+
+	public void ActiveAlorithmStep(int idStep)
+	{
+		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
+		switch (idStep) 
+		{
+		case 1:
+			algorithm1_Step1.SetActive (true);
+			break;
+		case 2:
+			algorithm1_Step2.SetActive (true);
+			break;
+		case 3:
+			algorithm1_Step3.SetActive (true);
+			break;
+		case 4:
+			algorithm1_Step4.SetActive (true);
+			break;
+		}
+	}
+
+	public void ReturnToPrevStep(int idStep)
+	{
+		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
+		switch (idStep) 
+		{
+		case 1:
+			algorithm1_Step1.SetActive (false);
+			algorithmPanel1.SetActive (true);
+			break;
+		case 2:
+			algorithm1_Step2.SetActive (false);
+			algorithm1_Step1.SetActive (true);
+			break;
+		case 3:
+			algorithm1_Step3.SetActive (false);
+			algorithm1_Step2.SetActive (true);
+			break;
+		case 4:
+			algorithm1_Step4.SetActive (false);
+			algorithm1_Step3.SetActive (true);
+			break;
+		}
+	}
+	public void NextStep(int idStep)
+	{
+		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
+		switch (idStep) 
+		{
+		case 1:
+			algorithmPanel1.SetActive (false);
+			algorithm1_Step1.SetActive (true);
+			break;
+		case 2:
+			algorithm1_Step1.SetActive (false);
+			algorithm1_Step2.SetActive (true);
+			break;
+		case 3:
+			algorithm1_Step2.SetActive (false);
+			algorithm1_Step3.SetActive (true);
+			break;
+		case 4:
+			algorithm1_Step3.SetActive (false);
+			algorithm1_Step4.SetActive (true);
+			break;
+		}
+	}
+
+	#endregion
 }
