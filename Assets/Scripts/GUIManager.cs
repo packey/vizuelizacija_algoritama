@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GUIManager : MonoBehaviour {
 
+    private int currentAlgorithm = -1;
+
     [Header("Canvas Panels")]
     public GameObject mainMenuPanel;                        // Main panel holding common buttons
     public GameObject chooseAlgorithmPanel;                 // Choose algorithm to show 
@@ -21,12 +23,16 @@ public class GUIManager : MonoBehaviour {
 	public GameObject algorithm1_Step1; 						// Algorithm 1 step 1
 	public GameObject algorithm1_Step2; 						// Algorithm 1 step 2
 	public GameObject algorithm1_Step3; 						// Algorithm 1 step 3
-	public GameObject algorithm1_Step4; 						// Algorithm 1 step 4
+	public GameObject algorithm1_Step4;                         // Algorithm 1 step 4
 
+    [Header("Algorithm 2 steps")]
+    public GameObject algorithm2_Step1;                         // Algorithm 2 step 1
+    public GameObject algorithm2_Step2;                         // Algorithm 2 step 2
+    public GameObject algorithm2_Step3;                         // Algorithm 2 step 3
+    public GameObject algorithm2_Step4;                         // Algorithm 2 step 4
 
-
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         SoundManager.instance.PlayMusic(SoundManager.instance.bgMusic);
 	}
@@ -129,27 +135,29 @@ public class GUIManager : MonoBehaviour {
 	public void ActiveAlorithm(int idAlgorithm)
 	{
 		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
-		switch (idAlgorithm) 
-		{
-			case 1:
-				algorithmPanel1.SetActive (true);
-				break;
-			case 2:
-				algorithmPanel2.SetActive (true);
-				break;
-			case 3:
-				algorithmPanel3.SetActive (true);
-				break;
-			case 4:
-				algorithmPanel4.SetActive (true);
-				break;
-		}
-	}
+		//switch (idAlgorithm) 
+		//{
+		//	case 1:
+		//		algorithmPanel1.SetActive (true);
+		//		break;
+		//	case 2:
+		//		algorithmPanel2.SetActive (true);
+		//		break;
+		//	case 3:
+		//		algorithmPanel3.SetActive (true);
+		//		break;
+		//	case 4:
+		//		algorithmPanel4.SetActive (true);
+		//		break;
+		//}
+        currentAlgorithm = idAlgorithm;
+        GetGameObject("algorithmPanel" + currentAlgorithm).SetActive(true);
+    }
 
 	public void ReturnToChoosePanel()
 	{
 		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
-		algorithmPanel1.SetActive (false);
+        GetGameObject("algorithmPanel" + currentAlgorithm).SetActive (false);
 		ActivatePanel(false, true, false, false);
 	}
 
@@ -158,18 +166,18 @@ public class GUIManager : MonoBehaviour {
 		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
 		switch (idStep) 
 		{
-		case 1:
-			algorithm1_Step1.SetActive (true);
-			break;
-		case 2:
-			algorithm1_Step2.SetActive (true);
-			break;
-		case 3:
-			algorithm1_Step3.SetActive (true);
-			break;
-		case 4:
-			algorithm1_Step4.SetActive (true);
-			break;
+		    case 1:
+                GetGameObject("algorithm" + currentAlgorithm + "_Step1").SetActive(true);
+                break;
+		    case 2:
+                GetGameObject("algorithm" + currentAlgorithm + "_Step2").SetActive(true);
+			    break;
+		    case 3:
+                GetGameObject("algorithm" + currentAlgorithm + "_Step3").SetActive(true);
+			    break;
+		    case 4:
+                GetGameObject("algorithm" + currentAlgorithm + "_Step4").SetActive(true);
+			    break;
 		}
 	}
 
@@ -178,22 +186,22 @@ public class GUIManager : MonoBehaviour {
 		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
 		switch (idStep) 
 		{
-		case 1:
-			algorithm1_Step1.SetActive (false);
-			algorithmPanel1.SetActive (true);
-			break;
-		case 2:
-			algorithm1_Step2.SetActive (false);
-			algorithm1_Step1.SetActive (true);
-			break;
-		case 3:
-			algorithm1_Step3.SetActive (false);
-			algorithm1_Step2.SetActive (true);
-			break;
-		case 4:
-			algorithm1_Step4.SetActive (false);
-			algorithm1_Step3.SetActive (true);
-			break;
+		    case 1:
+                GetGameObject("algorithm" + currentAlgorithm + "_Step1").SetActive(false);
+                GetGameObject("algorithmPanel" + currentAlgorithm).SetActive(true);
+                break;
+		    case 2:
+                GetGameObject("algorithm" + currentAlgorithm + "_Step2").SetActive(false);
+                GetGameObject("algorithm" + currentAlgorithm + "_Step1").SetActive(true);
+			    break;
+		    case 3:
+                GetGameObject("algorithm" + currentAlgorithm + "_Step3").SetActive(false);
+                GetGameObject("algorithm" + currentAlgorithm + "_Step2").SetActive(true);
+			    break;
+		    case 4:
+                GetGameObject("algorithm" + currentAlgorithm + "_Step4").SetActive(false);
+                GetGameObject("algorithm" + currentAlgorithm + "_Step3").SetActive(true);
+			    break;
 		}
 	}
 	public void NextStep(int idStep)
@@ -201,24 +209,32 @@ public class GUIManager : MonoBehaviour {
 		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
 		switch (idStep) 
 		{
-		case 1:
-			algorithmPanel1.SetActive (false);
-			algorithm1_Step1.SetActive (true);
-			break;
-		case 2:
-			algorithm1_Step1.SetActive (false);
-			algorithm1_Step2.SetActive (true);
-			break;
-		case 3:
-			algorithm1_Step2.SetActive (false);
-			algorithm1_Step3.SetActive (true);
-			break;
-		case 4:
-			algorithm1_Step3.SetActive (false);
-			algorithm1_Step4.SetActive (true);
-			break;
+		    case 1:
+                GetGameObject("algorithmPanel" + currentAlgorithm).SetActive(false);
+                GetGameObject("algorithm" + currentAlgorithm + "_Step1").SetActive(true);
+			    break;
+		    case 2:
+                GetGameObject("algorithm" + currentAlgorithm + "_Step1").SetActive(false);
+                GetGameObject("algorithm" + currentAlgorithm + "_Step2").SetActive(true);
+			    break;
+		    case 3:
+                GetGameObject("algorithm" + currentAlgorithm + "_Step2").SetActive(false);
+                GetGameObject("algorithm" + currentAlgorithm + "_Step3").SetActive(true);
+			    break;
+		    case 4:
+                GetGameObject("algorithm" + currentAlgorithm + "_Step3").SetActive(false);
+                GetGameObject("algorithm" + currentAlgorithm + "_Step4").SetActive(true);
+			    break;
 		}
 	}
 
 	#endregion
+
+    GameObject GetGameObject(string name)
+    {
+        var field = GetType().GetField(name);
+        if (field == null)
+            return null;
+        return field.GetValue(this) as GameObject;
+    }
 }
