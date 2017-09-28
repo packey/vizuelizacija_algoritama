@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GUIManager : MonoBehaviour {
 
@@ -30,6 +31,9 @@ public class GUIManager : MonoBehaviour {
     public GameObject algorithm2_Step2;                         // Algorithm 2 step 2
     public GameObject algorithm2_Step3;                         // Algorithm 2 step 3
     public GameObject algorithm2_Step4;                         // Algorithm 2 step 4
+
+    [Header("Other objects")]
+    public GameObject slider;
 
     // Use this for initialization
     void Start ()
@@ -77,6 +81,16 @@ public class GUIManager : MonoBehaviour {
     {
         SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
         ActivatePanel(false, false, false, true);
+    }
+
+    /// <summary>
+    /// Opens Maze scene
+    /// </summary>
+    public void OnOpenMazeClicked()
+    {
+        Maze.Size.x = Maze.Size.z = (int)slider.GetComponent<Slider>().value;
+        
+        SceneManager.LoadScene("maze");
     }
 
     /// <summary>
