@@ -5,10 +5,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public Maze mazePrefab;
+    public GameObject mainCamera;
 
     private Maze mazeInstance;
 
 	void Start () {
+        mainCamera.transform.position = new Vector3(0, 8.8f+(Maze.Size.x-10)*0.75f, -5.1f - (Maze.Size.x - 10) * 0.48f);
+
         BeginGame();
 	}
 	

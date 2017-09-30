@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Maze : MonoBehaviour {
 
-    public static IntVector2 Size;
+    public static IntVector2 Size = new IntVector2(30,30);
     public MazeCell cellPrefab;
     public MazeCellWall wallPrefab;
     public float generationStepDelay;
