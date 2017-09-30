@@ -2268,11 +2268,11 @@ MonoBehaviour:
     lineCount: 5
     pageCount: 1
     materialCount: 2
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3378,7 +3378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &424015887
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5415,7 +5415,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bb2947ffa368b13489a146ab4131ebe8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0951d6027dd75c744ac12e11fe4a93c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6142,11 +6142,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -10144,7 +10144,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 0.5
   m_canvasRenderer: {fileID: 1436712395}
   m_TextComponent: {fileID: 169946355}
   m_materialReferenceIndex: 1
@@ -10485,7 +10485,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1574983564}
   m_HandleRect: {fileID: 1574983563}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -10747,7 +10747,7 @@ MonoBehaviour:
   green_red_sprite: {fileID: 21300000, guid: 30e0484d5d230ad4eb41b1062a1d8b4f, type: 3}
   red_green_blue_sprite: {fileID: 21300000, guid: 4a14eb50c002fa14ab24a0d8c36e412c,
     type: 3}
-  default_sprite: {fileID: 21300000, guid: bb2947ffa368b13489a146ab4131ebe8, type: 3}
+  default_sprite: {fileID: 21300000, guid: 0951d6027dd75c744ac12e11fe4a93c9, type: 3}
   mainMenuPanel: {fileID: 1239386806}
   chooseAlgorithmPanel: {fileID: 1029166485}
   infoPanel: {fileID: 1682061406}
@@ -12365,7 +12365,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1669886053}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.2048128
+  m_Size: 0.20481277
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14358,7 +14358,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bb2947ffa368b13489a146ab4131ebe8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0951d6027dd75c744ac12e11fe4a93c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

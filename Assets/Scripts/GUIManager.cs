@@ -288,7 +288,28 @@ public class GUIManager : MonoBehaviour {
 		}
 		else 
 		{
-			imageMap.GetComponent<Image> ().sprite = default_sprite;
+			if (!green && !blue) 
+			{
+				imageMap.GetComponent<Image> ().sprite = default_sprite;
+			} 
+			else
+			{
+				if (blue && green)
+				{
+					imageMap.GetComponent<Image> ().sprite = blue_green_sprite;
+				}
+				else
+				{
+					if (blue) 
+					{
+						imageMap.GetComponent<Image> ().sprite = blue_sprite;
+					}
+					else
+					{
+						imageMap.GetComponent<Image> ().sprite = green_sprite;
+					}
+				}
+			}
 		}
 	}
 	public void blueSet()
@@ -296,11 +317,53 @@ public class GUIManager : MonoBehaviour {
 		blue = !blue;
 		if (blue) 
 		{
-			imageMap.GetComponent<Image> ().sprite = blue_sprite;
-		} 
-		else
+			if (red && green) 
+			{
+				imageMap.GetComponent<Image> ().sprite = red_green_blue_sprite;
+			} 
+			else 
+			{
+				if (red) 
+				{
+					imageMap.GetComponent<Image> ().sprite = blue_red_sprite;
+				} 
+				else 
+				{
+					if (green)
+					{
+						imageMap.GetComponent<Image> ().sprite = blue_green_sprite;
+					} 
+					else 
+					{
+						imageMap.GetComponent<Image> ().sprite = blue_sprite;
+					}
+				}
+			}
+		}
+		else 
 		{
-			imageMap.GetComponent<Image> ().sprite = default_sprite;
+			if (!red && !green) 
+			{
+				imageMap.GetComponent<Image> ().sprite = default_sprite;
+			} 
+			else
+			{
+				if (red && green)
+				{
+					imageMap.GetComponent<Image> ().sprite = green_red_sprite;
+				}
+				else
+				{
+					if (red) 
+					{
+						imageMap.GetComponent<Image> ().sprite = red_sprite;
+					}
+					else
+					{
+						imageMap.GetComponent<Image> ().sprite = green_sprite;
+					}
+				}
+			}
 		}
 
 	}
@@ -309,11 +372,53 @@ public class GUIManager : MonoBehaviour {
 		green = !green;
 		if (green) 
 		{
-			imageMap.GetComponent<Image> ().sprite = green_sprite;
-		} 
+			if (blue && red) 
+			{
+				imageMap.GetComponent<Image> ().sprite = red_green_blue_sprite;
+			} 
+			else 
+			{
+				if (blue) 
+				{
+					imageMap.GetComponent<Image> ().sprite = blue_green_sprite;
+				} 
+				else 
+				{
+					if (red)
+					{
+						imageMap.GetComponent<Image> ().sprite = green_red_sprite;
+					} 
+					else 
+					{
+						imageMap.GetComponent<Image> ().sprite = green_sprite;
+					}
+				}
+			}
+		}
 		else 
 		{
-			imageMap.GetComponent<Image> ().sprite = default_sprite;
+			if (!red && !blue) 
+			{
+				imageMap.GetComponent<Image> ().sprite = default_sprite;
+			} 
+			else
+			{
+				if (blue && red)
+				{
+					imageMap.GetComponent<Image> ().sprite = blue_red_sprite;
+				}
+				else
+				{
+					if (blue) 
+					{
+						imageMap.GetComponent<Image> ().sprite = blue_sprite;
+					}
+					else
+					{
+						imageMap.GetComponent<Image> ().sprite = red_sprite;
+					}
+				}
+			}
 		}
 
 	}
