@@ -922,7 +922,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 73856352}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554209070}
+        m_MethodName: redSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &73856352
@@ -2257,11 +2268,11 @@ MonoBehaviour:
     lineCount: 5
     pageCount: 1
     materialCount: 2
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3721,11 +3732,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -5856,11 +5867,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -5955,7 +5966,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 757429381}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554209070}
+        m_MethodName: blueSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &757429381
@@ -6120,11 +6142,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -7795,7 +7817,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1068876505}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554209070}
+        m_MethodName: greenSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1068876505
@@ -8394,11 +8427,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -9878,11 +9911,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -10705,6 +10738,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311a8c82bda8c6548bcc1faaccdb5b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageMap: {fileID: 716843624}
+  red_sprite: {fileID: 21300000, guid: d370e4b6fa4be8245a975d9b91c4a119, type: 3}
+  blue_sprite: {fileID: 21300000, guid: 623d6508a3b15f649a52b685736be67d, type: 3}
+  green_sprite: {fileID: 21300000, guid: c214435462c31be41a2ce5d63ff39993, type: 3}
+  blue_red_sprite: {fileID: 21300000, guid: 821ccce8a3f40604aa0f442c63b76a0f, type: 3}
+  blue_green_sprite: {fileID: 21300000, guid: c84940cc1aadca441a68807034bbfe7b, type: 3}
+  green_red_sprite: {fileID: 21300000, guid: 30e0484d5d230ad4eb41b1062a1d8b4f, type: 3}
+  red_green_blue_sprite: {fileID: 21300000, guid: 4a14eb50c002fa14ab24a0d8c36e412c,
+    type: 3}
+  default_sprite: {fileID: 21300000, guid: bb2947ffa368b13489a146ab4131ebe8, type: 3}
   mainMenuPanel: {fileID: 1239386806}
   chooseAlgorithmPanel: {fileID: 1029166485}
   infoPanel: {fileID: 1682061406}
@@ -10716,7 +10759,7 @@ MonoBehaviour:
   algorithm1_Step1: {fileID: 751578426}
   algorithm1_Step2: {fileID: 1943838554}
   algorithm1_Step3: {fileID: 309268035}
-  algorithm1_Step4: {fileID: 0}
+  algorithm1_Step4: {fileID: 1621204473}
   algorithm2_Step1: {fileID: 1898238616}
   algorithm2_Step2: {fileID: 180160976}
   algorithm2_Step3: {fileID: 1245153405}
@@ -11879,11 +11922,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -13298,7 +13341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2, y: 0.1}
   m_AnchorMax: {x: 0.8, y: 0.9}
-  m_AnchoredPosition: {x: 0, y: 418}
+  m_AnchoredPosition: {x: 0, y: 418.00003}
   m_SizeDelta: {x: 0, y: -836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945142014

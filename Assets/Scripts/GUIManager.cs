@@ -8,6 +8,20 @@ public class GUIManager : MonoBehaviour {
 
     private int currentAlgorithm = -1;
 
+	bool red=false, blue=false ,green=false;
+
+	public Image imageMap;
+	public Sprite red_sprite;
+	public Sprite blue_sprite;
+	public Sprite green_sprite;
+	public Sprite blue_red_sprite;
+	public Sprite blue_green_sprite;
+	public Sprite green_red_sprite;
+	public Sprite red_green_blue_sprite;
+	public Sprite default_sprite;
+
+
+
     [Header("Canvas Panels")]
     public GameObject mainMenuPanel;                        // Main panel holding common buttons
     public GameObject chooseAlgorithmPanel;                 // Choose algorithm to show 
@@ -243,6 +257,66 @@ public class GUIManager : MonoBehaviour {
 	}
 
 	#endregion
+
+	public void redSet()
+	{
+		red = !red;
+		if (red) 
+		{
+			if (blue && green) 
+			{
+				imageMap.GetComponent<Image> ().sprite = red_green_blue_sprite;
+			} 
+			else 
+			{
+				if (blue) 
+				{
+					imageMap.GetComponent<Image> ().sprite = blue_red_sprite;
+				} 
+				else 
+				{
+					if (green)
+					{
+						imageMap.GetComponent<Image> ().sprite = green_red_sprite;
+					} 
+					else 
+					{
+						imageMap.GetComponent<Image> ().sprite = red_sprite;
+					}
+				}
+			}
+		}
+		else 
+		{
+			imageMap.GetComponent<Image> ().sprite = default_sprite;
+		}
+	}
+	public void blueSet()
+	{
+		blue = !blue;
+		if (blue) 
+		{
+			imageMap.GetComponent<Image> ().sprite = blue_sprite;
+		} 
+		else
+		{
+			imageMap.GetComponent<Image> ().sprite = default_sprite;
+		}
+
+	}
+	public void greenSet()
+	{
+		green = !green;
+		if (green) 
+		{
+			imageMap.GetComponent<Image> ().sprite = green_sprite;
+		} 
+		else 
+		{
+			imageMap.GetComponent<Image> ().sprite = default_sprite;
+		}
+
+	}
 
     GameObject GetGameObject(string name)
     {
