@@ -10,6 +10,7 @@ public class GUIManager : MonoBehaviour {
 
 	bool red=false, blue=false ,green=false;
 
+	[Header("Maps Sprites")]
 	public Image imageMap;
 	public Sprite red_sprite;
 	public Sprite blue_sprite;
@@ -19,6 +20,16 @@ public class GUIManager : MonoBehaviour {
 	public Sprite green_red_sprite;
 	public Sprite red_green_blue_sprite;
 	public Sprite default_sprite;
+
+	[Header("Buttons Colors")]
+	public Button red_button;
+	public Button green_button;
+	public Button blue_button;
+
+	public Sprite red_button_sprite;
+	public Sprite green_button_sprite;
+	public Sprite blue_button_sprite;
+	public Sprite gray_button_sprite;
 
 
 
@@ -263,6 +274,7 @@ public class GUIManager : MonoBehaviour {
 		red = !red;
 		if (red) 
 		{
+			red_button.GetComponent<Image>().sprite = red_button_sprite;
 			if (blue && green) 
 			{
 				imageMap.GetComponent<Image> ().sprite = red_green_blue_sprite;
@@ -288,6 +300,7 @@ public class GUIManager : MonoBehaviour {
 		}
 		else 
 		{
+			red_button.GetComponent<Image>().sprite = gray_button_sprite;
 			if (!green && !blue) 
 			{
 				imageMap.GetComponent<Image> ().sprite = default_sprite;
@@ -317,6 +330,7 @@ public class GUIManager : MonoBehaviour {
 		blue = !blue;
 		if (blue) 
 		{
+			blue_button.GetComponent<Image>().sprite = blue_button_sprite;
 			if (red && green) 
 			{
 				imageMap.GetComponent<Image> ().sprite = red_green_blue_sprite;
@@ -342,6 +356,7 @@ public class GUIManager : MonoBehaviour {
 		}
 		else 
 		{
+			blue_button.GetComponent<Image>().sprite = gray_button_sprite;
 			if (!red && !green) 
 			{
 				imageMap.GetComponent<Image> ().sprite = default_sprite;
@@ -372,6 +387,7 @@ public class GUIManager : MonoBehaviour {
 		green = !green;
 		if (green) 
 		{
+			green_button.GetComponent<Image>().sprite = green_button_sprite;
 			if (blue && red) 
 			{
 				imageMap.GetComponent<Image> ().sprite = red_green_blue_sprite;
@@ -397,6 +413,7 @@ public class GUIManager : MonoBehaviour {
 		}
 		else 
 		{
+			green_button.GetComponent<Image>().sprite = gray_button_sprite;
 			if (!red && !blue) 
 			{
 				imageMap.GetComponent<Image> ().sprite = default_sprite;
