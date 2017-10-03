@@ -1101,11 +1101,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2045,11 +2045,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2471,8 +2471,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1882165206}
   m_HandleRect: {fileID: 1882165205}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.20481281
+  m_Value: 0
+  m_Size: 0.8746736
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4621,7 +4621,7 @@ RectTransform:
   m_Father: {fileID: 1950061445}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.52134734}
+  m_AnchorMin: {x: 0, y: 0.52125}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -6968,11 +6968,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -7178,8 +7178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -743.5}
-  m_SizeDelta: {x: 581.3, y: 1870}
+  m_AnchoredPosition: {x: 0, y: 41.349472}
+  m_SizeDelta: {x: 650, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &902675924
 MonoBehaviour:
@@ -7200,19 +7200,14 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Kona\u010Dan skup promenljivih V1, V2, \u2026, Vn\r\n - (Ne-prazni) domeni
-    mogu\u0107ih vrednosti za svaku promenljivu: DV1, DV2, \u2026 DVn\r\nKona\u010Dan
-    skup ograni\u010Denja: C1, C2, \u2026, Cm\r\n - Svako ograni\u010Denje Ci ograni\u010Dava
-    vrednosti koje promenljive mogu da uzimaju,\r\n\uF06E    - Primer, V1 \u2260 V2\r\n\uF0A8Stanje
-    se defini\u0161e kao dodela vrednosti nekim promenljivima.\r\nKonzistentna dodela
-    (Consistent assignment):\r\n - \uF0A4Dodela vrednosti ne naru\u0161ava ograni\u010Denja\n\uF0A8Dodela
-    je kompletna kada su uklju\u010Dene sve promenljive.\r\nRe\u0161enje za CSP je
-    kompletna dodela koja zadovoljava sva ograni\u010Denja.\r\n\uF0A8Neki CSP zahtevaju
-    re\u0161enje koje maksimizuje funkciju cilja.\r\nPrimeri primene CSP:\r\n - Scheduling(Airline
-    schedules)\r\n - Kriptografija\r\n - Computer vision -> image interpretation"
+  m_text: "Tipi\u010Dni primeri Backtracking algoritma su:\r\n\r\n  - Slagalice kao
+    problem osam dama, sudoku, ukr\u0161tene re\u010Di, peg soliter.\r\n   - Kombinatorne
+    optimizacije kao \u0161to su parsiranje i problem ranca.\r\n   - Logi\u010Dki
+    programski jezici koji koriste bektreking da bi generisali odgovore.\r\n\nBacktraking
+    se tako\u0111e primenjuje kod softvera za pore\u0111enje verzija za MediaWiki.\n\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 62857d67494e6594497891bcabe80131, type: 2}
-  m_sharedMaterial: {fileID: 21841655215316976, guid: 62857d67494e6594497891bcabe80131,
+  m_fontAsset: {fileID: 11400000, guid: 1d5c3cb8652f79c40b55f2bcef1d3ff1, type: 2}
+  m_sharedMaterial: {fileID: 21807326411177060, guid: 1d5c3cb8652f79c40b55f2bcef1d3ff1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7277,14 +7272,14 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -346.07855}
   m_textInfo:
     textComponent: {fileID: 902675924}
-    characterCount: 724
+    characterCount: 358
     spriteCount: 0
-    spaceCount: 109
-    wordCount: 97
+    spaceCount: 59
+    wordCount: 48
     linkCount: 0
-    lineCount: 28
+    lineCount: 12
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -7831,11 +7826,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -8977,7 +8972,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 593241446}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.47865266
+  m_Size: 0.47875
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9275,7 +9270,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.00000011920929}
-  m_SizeDelta: {x: 600, y: 400}
+  m_SizeDelta: {x: 700, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1159106623
 MonoBehaviour:
@@ -9371,7 +9366,7 @@ RectTransform:
   m_Father: {fileID: 810844900}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.7951872}
+  m_AnchorMin: {x: 0, y: 0.52138585}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -12370,7 +12365,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1180081717}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.20481284
+  m_Size: 0.47861415
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13312,7 +13307,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 400}
+  m_SizeDelta: {x: 700, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845541916
 MonoBehaviour:
@@ -13411,8 +13406,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -743.5879}
-  m_SizeDelta: {x: 581.3, y: 1870}
+  m_AnchoredPosition: {x: 0, y: -208.60861}
+  m_SizeDelta: {x: 650, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1869272822
 MonoBehaviour:
@@ -13486,7 +13481,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_enableKerning: 1
@@ -13513,14 +13508,14 @@ MonoBehaviour:
     spaceCount: 113
     wordCount: 71
     linkCount: 0
-    lineCount: 16
+    lineCount: 15
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -13570,8 +13565,8 @@ RectTransform:
   m_Father: {fileID: 306113417}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.79518723}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.8746736}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15037,11 +15032,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
