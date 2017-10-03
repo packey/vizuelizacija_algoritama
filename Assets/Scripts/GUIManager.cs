@@ -31,7 +31,10 @@ public class GUIManager : MonoBehaviour {
 	public Sprite blue_button_sprite;
 	public Sprite gray_button_sprite;
 
-
+    [Header("Graph Elements")]
+    public Toggle toggle6;
+    public Toggle toggle7;
+    public Toggle toggle9;
 
     [Header("Canvas Panels")]
     public GameObject mainMenuPanel;                        // Main panel holding common buttons
@@ -55,7 +58,12 @@ public class GUIManager : MonoBehaviour {
     public GameObject algorithm2_Step1;                         // Algorithm 2 step 1
     public GameObject algorithm2_Step2;                         // Algorithm 2 step 2
     public GameObject algorithm2_Step3;                         // Algorithm 2 step 3
-    public GameObject algorithm2_Step4;                         // Algorithm 2 step 4
+
+    [Header("Algorithm 3 steps")]
+    public GameObject algorithm3_Step1;
+    public GameObject algorithm3_Step2;
+    public GameObject algorithm3_Step3;
+    public GameObject algorithm3_Step4;
 
     [Header("Other objects")]
     public GameObject slider;
@@ -69,7 +77,6 @@ public class GUIManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (chooseAlgorithmPanel.activeSelf || infoPanel.activeSelf || exitPanel.activeSelf)
@@ -116,6 +123,18 @@ public class GUIManager : MonoBehaviour {
         Maze.Size.x = Maze.Size.z = (int)slider.GetComponent<Slider>().value;
         
         SceneManager.LoadScene("maze");
+    }
+
+    public void OnChooseGraphClicked()
+    {
+        algorithm3_Step4.SetActive(true);
+
+        if (toggle6.isOn)
+            GraphManager.instance.StartGraph(6);
+        else if (toggle7.isOn)
+            GraphManager.instance.StartGraph(7);
+        else
+            GraphManager.instance.StartGraph(9);
     }
 
     /// <summary>
@@ -173,22 +192,7 @@ public class GUIManager : MonoBehaviour {
 
 	public void ActiveAlorithm(int idAlgorithm)
 	{
-		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);
-		//switch (idAlgorithm) 
-		//{
-		//	case 1:
-		//		algorithmPanel1.SetActive (true);
-		//		break;
-		//	case 2:
-		//		algorithmPanel2.SetActive (true);
-		//		break;
-		//	case 3:
-		//		algorithmPanel3.SetActive (true);
-		//		break;
-		//	case 4:
-		//		algorithmPanel4.SetActive (true);
-		//		break;
-		//}
+		SoundManager.instance.PlaySound(SoundManager.instance.clickSound);		
         currentAlgorithm = idAlgorithm;
         GetGameObject("algorithmPanel" + currentAlgorithm).SetActive(true);
     }
