@@ -65,26 +65,26 @@ public class GraphManager : MonoBehaviour {
     {
         switch (graphID)
         {
-            case 6:
-                Init(6, adjMatrix6);
-                Coloring(6, adjMatrix6);
+            case 6:                
                 graph6Panel.SetActive(true);
                 graph7Panel.SetActive(false);
                 graph9Panel.SetActive(false);
+                Init(6, adjMatrix6);
+                StartCoroutine(Coloring(6, adjMatrix6));
                 break;
-            case 7:
-                Init(7, adjMatrix7);
-                Coloring(7, adjMatrix7);
+            case 7:                
                 graph7Panel.SetActive(true);
                 graph6Panel.SetActive(false);
                 graph9Panel.SetActive(false);
+                Init(7, adjMatrix7);
+                StartCoroutine(Coloring(7, adjMatrix7));
                 break;
-            case 9:
-                Init(9, adjMatrix9);
-                Coloring(9, adjMatrix9);
+            case 9:                
                 graph9Panel.SetActive(true);
                 graph7Panel.SetActive(false);
                 graph6Panel.SetActive(false);
+                Init(9, adjMatrix9);
+                StartCoroutine(Coloring(9, adjMatrix9));
                 break;
             default:
                 break;
@@ -109,7 +109,7 @@ public class GraphManager : MonoBehaviour {
         unprocessed = n;
     }
 
-    void Coloring(int n, int[,] a)
+    IEnumerator Coloring(int n, int[,] a)
     {
         int x, y;
         int ColorNumber = 0;
@@ -117,8 +117,16 @@ public class GraphManager : MonoBehaviour {
         while (unprocessed > 0) // while there is an uncolored vertex
         {
             x = MaxDegreeVertex(n); // find the one with maximum degree
-            ColorNumber++;
-            color[x] = ColorNumber; // give it a new color        
+            ColorNumber++;            
+            color[x] = ColorNumber; // give it a new color   
+            yield return new WaitForSeconds(0.5f);
+            if (n == 6)
+                graph6Nodes[x].GetComponent<Image>().color = colors[ColorNumber - 1];
+            else if (n == 7)
+                graph7Nodes[x].GetComponent<Image>().color = colors[ColorNumber - 1];
+            else
+                graph9Nodes[x].GetComponent<Image>().color = colors[ColorNumber - 1];
+
             unprocessed--;
             UpdateNN(ColorNumber, n, a); // find the set of non-neighbors of x
             while (NNCount > 0)
@@ -132,25 +140,32 @@ public class GraphManager : MonoBehaviour {
                     y = MaxDegreeInNN(n, a);
                 // color y the same to x
                 color[y] = ColorNumber;
+                yield return new WaitForSeconds(0.5f);
+                if (n == 6)
+                    graph6Nodes[y].GetComponent<Image>().color = colors[ColorNumber - 1];
+                else if (n == 7)
+                    graph7Nodes[y].GetComponent<Image>().color = colors[ColorNumber - 1];
+                else
+                    graph9Nodes[y].GetComponent<Image>().color = colors[ColorNumber - 1];
                 unprocessed--;
                 UpdateNN(ColorNumber, n, a);
                 // find the new set of non-neighbors of x
             }
         }
 
-        if (n == 6)
-        {
-            for (int i = 0; i < n; i++)
-                graph6Nodes[i].GetComponent<Image>().color = colors[color[i] - 1];
-        }
-        else if (n == 7)
-        {
-            for (int i = 0; i < n; i++)
-                graph7Nodes[i].GetComponent<Image>().color = colors[color[i] - 1];
-        }
-        else
-            for (int i = 0; i < n; i++)
-                graph9Nodes[i].GetComponent<Image>().color = colors[color[i] - 1];
+        //if (n == 6)
+        //{
+        //    for (int i = 0; i < n; i++)
+        //        graph6Nodes[i].GetComponent<Image>().color = colors[color[i] - 1];
+        //}
+        //else if (n == 7)
+        //{
+        //    for (int i = 0; i < n; i++)
+        //        graph7Nodes[i].GetComponent<Image>().color = colors[color[i] - 1];
+        //}
+        //else
+        //    for (int i = 0; i < n; i++)
+        //        graph9Nodes[i].GetComponent<Image>().color = colors[color[i] - 1];
     }
 
     int MaxDegreeVertex(int n)
