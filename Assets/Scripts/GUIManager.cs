@@ -68,7 +68,6 @@ public class GUIManager : MonoBehaviour {
     [Header("Algorithm 4 steps")]
     public GameObject algorithm4_Step1;
     public GameObject algorithm4_Step2;
-    public GameObject algorithm4_Step3;
 
     [Header("Other objects")]
     public GameObject slider;

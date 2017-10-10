@@ -1,0 +1,58 @@
+Initialize engine version: 5.6.3f1 (d3101c3b8468)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 610M (ID=0x1058)
+    Vendor:   NVIDIA
+    VRAM:     1999 MB
+    Driver:   21.21.13.7651
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\TextMeshPro-1.0.55.56.0b12.dll (this message is harmless)
+Loading E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\TextMeshPro-1.0.55.56.0b12.dll into Unity Child Domain
+- Completed reload, in  0.033 seconds
+Platform assembly: E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\UNITY\#UNITY PROJECT\vizuelizacija_algoritama\vizuelizacija_algoritama_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.097713 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2c04 -> priority: 1 
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.725991 ms
+
+Unloading 70 unused Assets to reduce memory usage. Loaded Objects now: 365.
+Total: 0.630518 ms (FindLiveObjects: 0.030343 ms CreateObjectMapping: 0.027219 ms MarkObjects: 0.350734 ms  DeleteObjects: 0.220882 ms)
+
+Maze.Start()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Maze.Start()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Maze.Start()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Maze.Start()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.122692 ms
+
+Unloading 402 unused Assets to reduce memory usage. Loaded Objects now: 1740.
+Total: 9.255643 ms (FindLiveObjects: 0.218205 ms CreateObjectMapping: 0.074073 ms MarkObjects: 5.611306 ms  DeleteObjects: 3.350273 ms)
+
