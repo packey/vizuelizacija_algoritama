@@ -53,6 +53,9 @@ public class GUIManager : MonoBehaviour {
 	public GameObject algorithm1_Step2; 						// Algorithm 1 step 2
 	public GameObject algorithm1_Step3; 						// Algorithm 1 step 3
 	public GameObject algorithm1_Step4;                         // Algorithm 1 step 4
+	public GameObject algorithm1_Step5;                         // Algorithm 1 step 5
+	public GameObject algorithm1_Step6;                         // Algorithm 1 step 6
+	public GameObject algorithm1_Step7;                         // Algorithm 1 step 7
 
     [Header("Algorithm 2 steps")]
     public GameObject algorithm2_Step1;                         // Algorithm 2 step 1
@@ -249,6 +252,18 @@ public class GUIManager : MonoBehaviour {
                 GetGameObject("algorithm" + currentAlgorithm + "_Step4").SetActive(false);
                 GetGameObject("algorithm" + currentAlgorithm + "_Step3").SetActive(true);
 			    break;
+			case 5:
+				GetGameObject("algorithm" + currentAlgorithm + "_Step5").SetActive(false);
+				GetGameObject("algorithm" + currentAlgorithm + "_Step4").SetActive(true);
+				break;
+			case 6:
+				GetGameObject("algorithm" + currentAlgorithm + "_Step6").SetActive(false);
+				GetGameObject("algorithm" + currentAlgorithm + "_Step5").SetActive(true);
+				break;
+			case 7:
+				GetGameObject("algorithm" + currentAlgorithm + "_Step7").SetActive(false);
+				GetGameObject("algorithm" + currentAlgorithm + "_Step6").SetActive(true);
+				break;
 		}
 	}
 	public void NextStep(int idStep)
@@ -272,6 +287,19 @@ public class GUIManager : MonoBehaviour {
                 GetGameObject("algorithm" + currentAlgorithm + "_Step3").SetActive(false);
                 GetGameObject("algorithm" + currentAlgorithm + "_Step4").SetActive(true);
 			    break;
+			case 5:
+				GetGameObject("algorithm" + currentAlgorithm + "_Step4").SetActive(false);
+				GetGameObject("algorithm" + currentAlgorithm + "_Step5").SetActive(true);
+				break;
+			case 6:
+				GetGameObject("algorithm" + currentAlgorithm + "_Step5").SetActive(false);
+				GetGameObject("algorithm" + currentAlgorithm + "_Step6").SetActive(true);
+				break;
+			case 7:
+				GetGameObject("algorithm" + currentAlgorithm + "_Step6").SetActive(false);
+				GetGameObject("algorithm" + currentAlgorithm + "_Step7").SetActive(true);
+				break;
+
 		}
 	}
 
@@ -455,4 +483,5 @@ public class GUIManager : MonoBehaviour {
             return null;
         return field.GetValue(this) as GameObject;
     }
+		
 }
