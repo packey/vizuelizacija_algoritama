@@ -10,8 +10,13 @@ public class GUIManager : MonoBehaviour {
 
 	bool red=false, blue=false ,green=false;
 
+	public static bool option1,option2;
+
 	[Header("Maps Sprites")]
 	public Image imageMap;
+	public Image imageMapStep1;
+	public Image imageMapStep2;
+	public Image imageMapStep3;
 	public Sprite red_sprite;
 	public Sprite blue_sprite;
 	public Sprite green_sprite;
@@ -20,6 +25,35 @@ public class GUIManager : MonoBehaviour {
 	public Sprite green_red_sprite;
 	public Sprite red_green_blue_sprite;
 	public Sprite default_sprite;
+	public Sprite WA_red;
+	public Sprite WA_green;
+	public Sprite WA_blue;
+
+	[Header("Maps Sprites Full")]
+	public Sprite maps1; 	//WA=crvena, NT=zelena, SA=plava, Q=crvena, NSW=zelena, V=crvena, T=zelena
+	public Sprite maps2;	//WA=crvena, NT=plava, SA=zelena, Q=crvena, NSW=plava, V=crvena, T=plava
+	public Sprite maps3;	//WA=zelena, NT=crvena, SA=plava, Q=zelena, NSW=crvena, V=zelena, T=crvena
+	public Sprite maps4;	//WA=zelena, NT=plava, SA=crvena, Q=zelena, NSW=plava, V=zelena, T=plava
+	public Sprite maps5;	//WA=plava, NT=zelena, SA=crvena, Q=plava, NSW=zelena, V=plava, T=zelena
+	public Sprite maps6;	//WA=plava, NT=crvena, SA=zelena, Q=plava, NSW=crvena, V=plava, T=crvena
+
+	[Header("WA")]
+	public Sprite WA_red_NT_green_SA_blue;
+	public Sprite WA_red_NT_blue_SA_green;
+	public Sprite WA_green_NT_red_SA_blue;
+	public Sprite WA_green_NT_blue_SA_red;
+	public Sprite WA_blue_NT_green_SA_red;
+	public Sprite WA_blue_NT_red_SA_green;
+
+	public GameObject optionInfo;
+
+	[Header("Maps Elements")]
+	public Toggle redColor;
+	public Toggle greenColor;
+	public Toggle blueColor;
+
+	public Button option1_button;
+	public Button option2_button;
 
 	[Header("Buttons Colors")]
 	public Button red_button;
@@ -91,6 +125,36 @@ public class GUIManager : MonoBehaviour {
             else
                 ActivatePanel(false, false, false, true);
         }
+		if (algorithm1_Step5.activeSelf)
+		{
+			if (redColor.isOn) 
+			{
+				imageMapStep1.GetComponent<Image> ().sprite = WA_red;
+			} 
+			else if (greenColor.isOn) 
+			{
+				imageMapStep1.GetComponent<Image> ().sprite = WA_green;
+			} 
+			else 
+			{
+				imageMapStep1.GetComponent<Image> ().sprite = WA_blue;
+			}
+		}
+		if (option1) 
+		{
+			option1_button.GetComponent<Image> ().sprite = blue_button_sprite;
+			option2_button.GetComponent<Image> ().sprite = gray_button_sprite;
+		}
+		if (option2)
+		{
+			option1_button.GetComponent<Image> ().sprite = gray_button_sprite;
+			option2_button.GetComponent<Image> ().sprite = blue_button_sprite;
+		}
+		if (!option1 && !option2)
+		{
+			option1_button.GetComponent<Image> ().sprite = gray_button_sprite;
+			option2_button.GetComponent<Image> ().sprite = gray_button_sprite;
+		}
 	}
 
     #region COMMON_BUTTONS
@@ -483,5 +547,154 @@ public class GUIManager : MonoBehaviour {
             return null;
         return field.GetValue(this) as GameObject;
     }
+		
+	public void coloringMapStep2()
+	{
+		
+		GetGameObject("algorithm" + currentAlgorithm + "_Step5").SetActive(false);
+		GetGameObject("algorithm" + currentAlgorithm + "_Step6").SetActive(true);
+
+		if (redColor.isOn) 
+		{
+			imageMapStep2.GetComponent<Image> ().sprite = WA_red;
+		} 
+		else if (greenColor.isOn) 
+		{
+			imageMapStep2.GetComponent<Image> ().sprite = WA_green;
+		} 
+		else 
+		{
+			imageMapStep2.GetComponent<Image> ().sprite = WA_blue;
+		}
+		option1 = false;
+		option2 = false;
+	}
+
+	public void coloringMapStep3()
+	{
+		if (option1 || option2) 
+		{
+			GetGameObject("algorithm" + currentAlgorithm + "_Step6").SetActive(false);
+			GetGameObject("algorithm" + currentAlgorithm + "_Step7").SetActive(true);
+			if (redColor.isOn) 
+			{
+				if (option1) 
+				{
+					imageMapStep3.GetComponent<Image> ().sprite = WA_red_NT_green_SA_blue;
+				} else 
+				{
+					imageMapStep3.GetComponent<Image> ().sprite = WA_red_NT_blue_SA_green;
+				}
+			}
+			else if (greenColor.isOn)
+			{
+				if (option1) 
+				{
+					imageMapStep3.GetComponent<Image> ().sprite = WA_green_NT_red_SA_blue;
+				} 
+				else
+				{
+					imageMapStep3.GetComponent<Image> ().sprite = WA_green_NT_blue_SA_red;
+				}
+			}
+			else
+			{
+				if (option1)
+				{
+					imageMapStep3.GetComponent<Image> ().sprite = WA_blue_NT_green_SA_red;
+				}
+				else
+				{
+					imageMapStep3.GetComponent<Image> ().sprite = WA_blue_NT_red_SA_green;
+				}
+			}
+		}
+		else
+		{
+			optionInfo.SetActive (true);
+		}
+	}
+
+	public void coloringMapFull()
+	{
+		if (redColor.isOn) 
+		{
+			if (option1) 
+			{
+				imageMapStep3.GetComponent<Image> ().sprite = maps1; //1
+			} else 
+			{
+				imageMapStep3.GetComponent<Image> ().sprite = maps2; //2
+			}
+		}
+		else if (greenColor.isOn)
+		{
+			if (option1) 
+			{
+				imageMapStep3.GetComponent<Image> ().sprite = maps3; //3
+			} 
+			else
+			{
+				imageMapStep3.GetComponent<Image> ().sprite = maps4; //4
+			}
+		}
+		else
+		{
+			if (option1)
+			{
+				imageMapStep3.GetComponent<Image> ().sprite = maps5; //5
+			}
+			else
+			{
+				imageMapStep3.GetComponent<Image> ().sprite = maps6; //6
+			}
+		}
+	}
+
+	public void backToHome()
+	{
+		SceneManager.LoadScene("start_menu");
+	}
+
+	public void closeOptionInfo()
+	{
+		optionInfo.SetActive (false);
+	}
+
+
+	public void option1MapStep2()
+	{
+		option1 = true;
+		option2 = false;
+		if (redColor.isOn) 
+		{
+			imageMapStep2.GetComponent<Image> ().sprite = WA_red_NT_green_SA_blue;
+		} 
+		else if (greenColor.isOn) 
+		{
+			imageMapStep2.GetComponent<Image> ().sprite = WA_green_NT_red_SA_blue;
+		} 
+		else 
+		{
+			imageMapStep2.GetComponent<Image> ().sprite = WA_blue_NT_green_SA_red;
+		}
+	}
+	public void option2MapStep2()
+	{
+		option1 = false;
+		option2 = true;
+		if (redColor.isOn) 
+		{
+			imageMapStep2.GetComponent<Image> ().sprite = WA_red_NT_blue_SA_green;
+		} 
+		else if (greenColor.isOn) 
+		{
+			imageMapStep2.GetComponent<Image> ().sprite = WA_green_NT_blue_SA_red;
+		} 
+		else 
+		{
+			imageMapStep2.GetComponent<Image> ().sprite = WA_blue_NT_red_SA_green;
+		}
+	}
 		
 }
