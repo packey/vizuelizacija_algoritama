@@ -7,7 +7,21 @@ public class Maze : MonoBehaviour {
     public static IntVector2 Size = new IntVector2(30,30);
     public MazeCell cellPrefab;
     public MazeCellWall wallPrefab;
-    public float generationStepDelay;
+    public static float generationStepDelay;
+
+    public static bool showNextObject;
+    public static bool showNextObjectFirstTime;
+    public static int nextObjectMessagesCount = 0;
+
+    public static bool showBacktrack;
+    public static bool showBacktrackFirstTime;
+    public static int backtrackMessagesCount = 0;
+
+    public static bool isPaused = false;
+
+    public static string displayMessage;
+
+    private bool shouldDisplayBacktrack = true;
     
     private MazeCell[,] cells;
     
@@ -108,6 +122,9 @@ public class Maze : MonoBehaviour {
             WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
             yield return delay;
 
+            if (isPaused)
+                continue;
+
             //[2]
             List<MazeCell> neighbours = getUnvisitedNeighbours(currentCell);
 
@@ -115,13 +132,29 @@ public class Maze : MonoBehaviour {
             if (neighbours.Count == 0)
             {
                 //[7]
+                if (showBacktrack && shouldDisplayBacktrack)
+                {
+                    displayMessage = "Došli smo do kraja u ćeliji koja je na koordinatama " + currentCell.position.x + "," + currentCell.position.z+" Vraćanje nazad";
+                    backtrackMessagesCount++;
+                    if ((showBacktrackFirstTime && backtrackMessagesCount == 1) || !showBacktrackFirstTime)
+                        isPaused = true;
+                    shouldDisplayBacktrack = false;
+                }
                 currentCell = cellsStack.Pop();
                 continue;
             }
+            shouldDisplayBacktrack = true;
                 
             //[2]
             MazeCell nextCell = neighbours[Random.Range(0, neighbours.Count)];
             nextCell.gameObject.GetComponent<Renderer>().material.color = Color.blue;
+            if(showNextObject)
+            {
+                displayMessage = "Sledeća ćelija je na koordinatama " + nextCell.position.x + "," + nextCell.position.z;
+                nextObjectMessagesCount++;
+                if((showNextObjectFirstTime && nextObjectMessagesCount==1) || !showNextObjectFirstTime)
+                    isPaused = true;
+            }
 
             //[3]
             if (currentCell.position.x == nextCell.position.x)

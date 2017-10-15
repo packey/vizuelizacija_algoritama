@@ -191,7 +191,6 @@ public class GUIManager : MonoBehaviour {
     /// </summary>
     public void OnOpenMazeClicked()
     {
-        Maze.Size.x = Maze.Size.z = (int)slider.GetComponent<Slider>().value;
         
         SceneManager.LoadScene("maze");
     }
